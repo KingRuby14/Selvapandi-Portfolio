@@ -1,8 +1,8 @@
 {
   "name": "selvapandi-portfolio",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "private": true,
+  "homepage": "https://KingRuby14.github.io/Selvapandi-Full-Stack-Web-Developer-Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
