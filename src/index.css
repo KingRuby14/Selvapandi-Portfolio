@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  /* cursor: none; */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+/* Hide default cursor on interactive elements */
+/* a,
+button,
+input,
+textarea,
+select {
+  cursor: none;
+} */
+
+/* Section styling */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.panel {
+  width: 100%;
+  height: 100vh;
+}
+
+.pin-spacer {
+  height: 200vh;
+}
+
+/* Show default cursor on mobile */
+@media (max-width: 768px) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: auto;
+  }
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+
+  .panel-title {
+    font-size: 2rem !important;
+  }
+
+  .panel-desc {
+    font-size: 1rem !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
+@layer components {
+  .slide {
+    @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+  }
+}
+.slide {
+  display: inline-block;
+  flex-direction: column;
+  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  animation: wordSlider 15s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+}
+@keyframes wordSlider {
+  0% {
+    transform: translateY(0.5%);
+  }
+  12.5% {
+    transform: translateY(-12.5%);
+  }
+  25% {
+    transform: translateY(-25%);
+  }
+  37.5% {
+    transform: translateY(-37.5%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  62.5% {
+    transform: translateY(-62.5%);
+  }
+  75% {
+    transform: translateY(-75%);
+  }
+  87.5% {
+    transform: translateY(-87.5%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  display: flex;
+  animation: scroll-left 25s linear infinite;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: border-color 0.3s ease-in-out;
+  background: #0e0e10;
+}
+
+/* glowing border */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* thickness of glow border */
+  background: conic-gradient(
+    from calc(var(--start, 0) * 1deg),
+    #00ffe0,
+    #0080ff,
+    #a020f0,
+    #ff0080,
+    #00ffe0
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  height: 150%;
+  border-radius: inherit;
+  filter: blur(30px) saturate(200%);
+  transition: background 0.2s ease-out;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
