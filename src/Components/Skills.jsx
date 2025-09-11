@@ -144,7 +144,7 @@ const Skills = () => {
       </div>
 
       {/* CSS Animation */}
-      <style jsx>{`
+      <style>{`
         @keyframes bounceScroll {
           0% {
             transform: translateX(0);
