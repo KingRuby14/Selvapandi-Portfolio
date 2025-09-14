@@ -34,25 +34,24 @@ export default function Hero() {
       >
         {/* Floating gradient bubbles */}
         <div className="absolute inset-0 z-10 overflow-hidden">
-  {/* Top Left */}
-  <div className="absolute top-10 left-1/4 w-72 h-72 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 rounded-full opacity-30 blur-3xl animate-float-slow"></div>
+          {/* Top Left */}
+          <div className="absolute top-10 left-1/4 w-72 h-72 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 rounded-full opacity-30 blur-3xl animate-float-slow"></div>
 
-  {/* Top Right */}
-  <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-pink-500 via-orange-400 to-purple-500 rounded-full opacity-25 blur-2xl animate-float-medium"></div>
+          {/* Top Right */}
+          <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-pink-500 via-orange-400 to-purple-500 rounded-full opacity-25 blur-2xl animate-float-medium"></div>
 
-  {/* Middle Left */}
-  <div className="absolute top-1/2 left-16 w-52 h-52 bg-gradient-to-r from-orange-400 via-purple-500 to-pink-500 rounded-full opacity-20 blur-2xl animate-float-fast"></div>
+          {/* Middle Left */}
+          <div className="absolute top-1/2 left-16 w-52 h-52 bg-gradient-to-r from-orange-400 via-purple-500 to-pink-500 rounded-full opacity-20 blur-2xl animate-float-fast"></div>
 
-  {/* Bottom Right */}
-  <div className="absolute bottom-16 right-32 w-72 h-72 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 rounded-full opacity-25 blur-3xl animate-float-slow"></div>
+          {/* Bottom Right */}
+          <div className="absolute bottom-16 right-32 w-72 h-72 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 rounded-full opacity-25 blur-3xl animate-float-slow"></div>
 
-  {/* Bottom Left */}
-  <div className="absolute bottom-24 left-28 w-64 h-64 bg-gradient-to-r from-pink-500 via-orange-400 to-purple-500 rounded-full opacity-30 blur-2xl animate-float-medium"></div>
+          {/* Bottom Left */}
+          <div className="absolute bottom-24 left-28 w-64 h-64 bg-gradient-to-r from-pink-500 via-orange-400 to-purple-500 rounded-full opacity-30 blur-2xl animate-float-medium"></div>
 
-  {/* Center (behind text, faint) */}
-  <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-80 h-80 bg-gradient-to-r from-orange-400 via-purple-500 to-pink-500 rounded-full opacity-15 blur-3xl animate-float-fast"></div>
-</div>
-
+          {/* Center (behind text, faint) */}
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-80 h-80 bg-gradient-to-r from-orange-400 via-purple-500 to-pink-500 rounded-full opacity-15 blur-3xl animate-float-fast"></div>
+        </div>
 
         {/* Left: text */}
         <div className="relative z-30 w-full sm:px-8 md:px-12 xl:mb-0 mb-10 mt-10">
@@ -73,7 +72,7 @@ export default function Hero() {
               Selvapandi
             </span>
             <br />
-            <span className="text-purple-400 h-12 inline-flex items-center">
+            <span className="text-purple-400 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl h-12 inline-flex items-center">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={index}
@@ -107,6 +106,7 @@ export default function Hero() {
             digital solutions.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
@@ -117,21 +117,38 @@ export default function Hero() {
               delay: 2,
               duration: 1.5,
             }}
-            className="flex gap-4 mt-5"
+            className="flex flex-wrap gap-4 mt-5"
           >
+            {/* View Work */}
             <a href="#Projects">
               <div className="p-[2px] rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 hover:from-orange-400 hover:via-pink-500 hover:to-purple-500 transition duration-300 inline-block">
-                <button className="bg-black text-white py-2 px-8 rounded-full font-semibold shadow-lg transition duration-200 hover:scale-105">
+                <button className="bg-black text-white py-2 px-6 sm:px-8 rounded-full font-semibold shadow-lg transition duration-200 hover:scale-105">
                   View my work
                 </button>
               </div>
             </a>
+
+            {/* Hire Me */}
             <button
               onClick={openContactForm}
-              className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white py-2 px-8 rounded-full font-semibold shadow-lg transition duration-200 hover:scale-105 border-none "
+              className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white py-2 px-6 sm:px-8 rounded-full font-semibold shadow-lg transition duration-200 hover:scale-105 border-none "
             >
               Hire me
             </button>
+
+            {/* CV Button */}
+            <a
+              href="/SELVAPANDI.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <div className="p-[2px] rounded-full bg-gradient-to-r from-white via-pink-500 to-white hover:from-purple-500 hover:via-pink-500 hover:to-orange-400 transition duration-300 inline-block">
+                <button className="bg-black text-white py-2 px-6 sm:px-8 rounded-full font-semibold shadow-lg transition duration-200 hover:scale-105">
+                  Download CV
+                </button>
+              </div>
+            </a>
           </motion.div>
 
           <motion.div
@@ -164,6 +181,7 @@ export default function Hero() {
         </motion.div>
       </section>
 
+      {/* Mobile Image */}
       <div className="flex justify-center items-center mt-8 xl:hidden">
         <img
           className="h-[16rem] sm:h-[22rem] md:h-[30rem] lg:h-[40rem] rounded-full"
@@ -172,6 +190,7 @@ export default function Hero() {
         />
       </div>
 
+      {/* Contact Modal */}
       <ContactFormModal
         contactFormOpen={contactFormOpen}
         closeContactForm={closeContactForm}

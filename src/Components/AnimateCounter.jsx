@@ -11,9 +11,9 @@ const AnimatedCounter = () => {
 
   const counterItems = [
     { value: 1, suffix: "+", label: "Years of Experience" },
-    { value: 2, suffix: "", label: "Satisfied Clients" },
-    { value: 2, suffix: "", label: "Completed Projects" },
-    { value: 2, suffix: "", label: "Students Mentored" },
+    { value: 2, suffix: "+", label: "Satisfied Clients" },
+    { value: 3, suffix: "+", label: "Completed Projects" },
+    { value: 3, suffix: "+", label: "Students Mentored" },
   ];
 
   useGSAP(() => {

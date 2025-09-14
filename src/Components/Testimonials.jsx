@@ -10,30 +10,35 @@ const Testimonials = () => {
       mentions: "Pilot Horizons - Client School Student",
       review:
         "Working with Selvapandi on Pilot Horizons was an incredible experience! Despite a tight deadline, the website was delivered within just 12 hours without compromising quality. The platform made complex concepts easy to grasp, offering a well-structured, engaging, and resourceful learning experience.",
+      rating: 5,
     },
     {
       name: "Vikram Trust",
       mentions: "Client NGO - Unclaimed Project – Now Part of My Portfolio",
       review:
         "Originally a client project, Vikram Trust’s website became a testament to my commitment to quality and innovation. Despite challenges, including unfulfilled payments and unresponsive communication, I took full control of the project, transforming it into a platform that reflects my expertise in web development.",
+      rating: 5,
     },
     {
       name: "Ruby",
       mentions: "Pilot Horizons",
       review:
-        "Discovering Pilot Horizons has been an incredible help to me as a mother. With my child aspiring to become a pilot, this platform has provided invaluable insights and guidance. It’s a highly recommended resource for students who dream of taking flight and pursuing an aviation career.",
+        "Discovering Pilot Horizons has been an incredible help to me as a mother. With my child aspiring to become a pilot, this platform has provided in valuable insights and guidance. It’s a highly recommended resource for students who dream of taking flight and pursuing an aviation career.",
+      rating: 5,
     },
     {
       name: "Mahalakshmi​",
-      mentions: "Student (Html, CSS, JavaScript)",
+      mentions: "Student - HTML, CSS, JavaScript",
       review:
-        "At first, I found it a bit difficult to interact. But as time went on, it became fun and I was able to learn easily. Initially, I was scared to speak up and ask doubts, but gradually I got comfortable. Your teaching skills are excellent! Everything felt easier because you explained it so simply – thank you for that!",
+        "At first, I found it a bit difficult to interact. But as time went on, it became fun and I was able to learn easily. Initially, I was scared to speak up and ask doubts, but gradually I got comfortable. Your teaching skills are excellent! Everything felt easier because you explained it so simply and clearly.",
+      rating: 5,
     },
     {
       name: "RamaLakshmi",
-      mentions: "Student (Full Stack - MERN)",
+      mentions: "Student - Full Stack (MERN)",
       review:
         "You didn’t just teach me to code — you taught me how to think like a developer. From zero knowledge in HTML, CSS, and JS to building real React and Node.js projects, I never thought I could do it. Your teaching style, discipline, and motivation helped me complete everything step-by-step.",
+      rating: 5,
     },
   ];
 
@@ -44,12 +49,9 @@ const Testimonials = () => {
           title="What People Say About Me?"
           sub="⭐️ Clients & Students feedback highlights ⭐️"
         />
-          <div className="w-5/6 mt-4 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <div className="w-5/6 mt-4 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
 
-        <div
-          className="lg:columns-3 md:columns-2 columns-1 mt-16"
-          
-        >
+        <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
           {testimonials.map((testimonial, index) => (
             <GlowCard card={testimonial} key={index} index={index}>
               <div className="flex items-center gap-3 ">

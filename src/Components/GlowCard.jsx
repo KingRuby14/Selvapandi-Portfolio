@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import Star from "../assets/star.png";
 import { motion } from "framer-motion";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 const GlowCard = ({ card, index, children }) => {
   const cardRefs = useRef([]);
@@ -22,6 +22,24 @@ const GlowCard = ({ card, index, children }) => {
     card.style.setProperty("--y", `${e.clientY - rect.top}px`);
   };
 
+  // Generate stars based on rating
+  const renderStars = (rating) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalf = rating % 1 >= 0.5;
+
+    for (let i = 0; i < 5; i++) {
+      if (i < fullStars) {
+        stars.push(<FaStar key={i} className="text-yellow-400 w-5 h-5" />);
+      } else if (i === fullStars && hasHalf) {
+        stars.push(<FaStarHalfAlt key={i} className="text-yellow-400 w-5 h-5" />);
+      } else {
+        stars.push(<FaRegStar key={i} className="text-gray-400 w-5 h-5" />);
+      }
+    }
+    return stars;
+  };
+
   return (
     <div
       ref={(el) => (cardRefs.current[index] = el)}
@@ -33,9 +51,7 @@ const GlowCard = ({ card, index, children }) => {
 
       {/* Stars */}
       <div className="flex items-center gap-1 mb-4">
-        {Array.from({ length: 5 }, (_, i) => (
-          <img key={i} src={Star} alt="star" className="w-4 h-4" />
-        ))}
+        {renderStars(card.rating || 5)} {/* default 5 if no rating */}
       </div>
 
       {/* Review */}

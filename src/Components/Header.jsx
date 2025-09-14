@@ -124,7 +124,7 @@ export default function Header() {
               <FiFacebook className="w-5 h-5" />
             </motion.a>
 
-            {/* hire me button */}
+            {/* Get In Touch me button */}
             <motion.button
               onClick={openContactForm}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -140,7 +140,7 @@ export default function Header() {
              text-white py-2 px-8 rounded-full font-semibold shadow-lg 
              transition duration-200 transform hover:scale-105 border-none"
             >
-              Hire Me
+              Get In Touch
             </motion.button>
           </div>
 
@@ -220,7 +220,7 @@ export default function Header() {
               }}
               className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white py-2 px-8 rounded-full font-semibold shadow-lg transition duration-200 hover:scale-105 border-none w-full mt-5"
             >
-              Hire Me
+              Get In Touch
             </button>
           </div>
         </motion.div>

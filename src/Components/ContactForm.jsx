@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
-
+import { FiMail, FiPhone } from "react-icons/fi";
 export default function ContactFormModal({
   contactFormOpen,
   closeContactForm,
@@ -75,6 +75,28 @@ export default function ContactFormModal({
               </button>
             </div>
 
+            {/* Contact Info */}
+            <div className="text-center md:text-left">
+              <div className="flex flex-col gap-3 py-4 text-white text-sm">
+                <a
+                  href="mailto:selvapandi322@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center font-semibold text-white justify-center md:justify-start gap-2 hover:text-violet-400 transition-colors"
+                >
+                  <FiMail className="w-5 h-5" />
+                  <span>selvapandi322@gmail.com</span>
+                </a>
+                <a
+                  href="tel:+1234567890"
+                  className="flex items-center font-semibold text-white justify-center md:justify-start gap-2 hover:text-violet-400 transition-colors"
+                >
+                  <FiPhone className="w-5 h-5" />
+                  <span>+91 9092264342</span>
+                </a>
+              </div>
+            </div>
+
             {/* form */}
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -85,20 +107,20 @@ export default function ContactFormModal({
                   Name
                 </label>
                 <input
-  type="text"
-  id="name"
-  name="name"
-  value={form.name}
-  onChange={handleChange}
-  placeholder="Your Name"
-  required
-  className="w-full px-4 py-2 rounded-lg 
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                  className="w-full px-4 py-2 rounded-lg 
              bg-gray-900/50 text-white 
              border border-gray-600 
              focus:border-violet-500 focus:ring-2 focus:ring-violet-400 
              transition-all duration-300
              placeholder-gray-400"
-/>
+                />
               </div>
 
               <div>
@@ -109,20 +131,20 @@ export default function ContactFormModal({
                   Email
                 </label>
                 <input
-  type="email"
-  id="email"
-  name="email"
-  value={form.email}
-  onChange={handleChange}
-  placeholder="Your Email"
-  required
-  className="w-full px-4 py-2 rounded-lg 
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                  className="w-full px-4 py-2 rounded-lg 
              bg-gray-900/50 text-white 
              border border-gray-600 
              focus:border-pink-500 focus:ring-2 focus:ring-pink-400 
              transition-all duration-300
              placeholder-gray-400"
-/>
+                />
               </div>
 
               <div>
@@ -133,43 +155,45 @@ export default function ContactFormModal({
                   Message
                 </label>
                 <textarea
-  rows={4}
-  id="message"
-  name="message"
-  value={form.message}
-  onChange={handleChange}
-  placeholder="How can we help you?"
-  required
-  className="w-full px-4 py-2 rounded-lg 
+                  rows={4}
+                  id="message"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="How can we help you?"
+                  required
+                  className="w-full px-4 py-2 rounded-lg 
              bg-gray-900/50 text-white 
              border border-gray-600 
              focus:border-blue-500 focus:ring-2 focus:ring-blue-400 
              transition-all duration-300
              placeholder-gray-400"
-/>
+                />
               </div>
 
               <motion.button
-  type="submit"
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.97 }}
-  disabled={loading}
-  className="w-full px-4 py-2 rounded-lg 
+                type="submit"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                disabled={loading}
+                className="w-full px-4 py-2 rounded-lg 
              bg-gradient-to-r from-violet-600 via-pink-500 to-purple-600 
              hover:from-pink-600 hover:via-purple-600 hover:to-violet-600
              text-white font-bold shadow-md 
              transition-all duration-300
              relative overflow-hidden group"
->
-  <span className="relative z-10">
-    {loading ? "Sending..." : "Send Message"}
-  </span>
-  {/* shine effect */}
-  <span className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20 
+              >
+                <span className="relative z-10">
+                  {loading ? "Sending..." : "Send Message"}
+                </span>
+                {/* shine effect */}
+                <span
+                  className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20 
                    opacity-0 group-hover:opacity-100 
                    translate-x-[-100%] group-hover:translate-x-[100%] 
-                   transition-transform duration-700 ease-in-out"></span>
-</motion.button>
+                   transition-transform duration-700 ease-in-out"
+                ></span>
+              </motion.button>
             </form>
           </motion.div>
         </motion.div>

@@ -125,7 +125,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="w-[90%] md:w-[60%] h-[80px] md:h-[100px] overflow-hidden relative mt-8 md:mt-0 md:absolute md:bottom-[5%] px-2 z-20"
         >
-          <div className="flex gap-5 animate-bounceScroll">
+          <div className="flex gap-5 animate-marquee">
             {[...skillsLogos, ...skillsLogos].map((logo, index) => (
               <motion.div
                 key={index}
@@ -141,34 +141,34 @@ const Skills = () => {
             ))}
           </div>
         </motion.div>
+
+        {/* CSS Animation */}
+        <style>{`
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+  }
+
+  /* Hide scrollbar */
+  .overflow-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .overflow-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+`}</style>
       </div>
-
-      {/* CSS Animation */}
-      <style>{`
-        @keyframes bounceScroll {
-          0% {
-            transform: translateX(0);
-          }
-          50% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-        .animate-bounceScroll {
-          animation: bounceScroll 15s ease-in-out infinite;
-        }
-
-        /* Hide scrollbar */
-        .overflow-hidden::-webkit-scrollbar {
-          display: none;
-        }
-        .overflow-hidden {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </section>
   );
 };

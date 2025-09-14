@@ -14,9 +14,9 @@ export default function Project() {
       title: "Aquarium Shop E-commerce",
       description:
         "A full-stack MERN e-commerce website with product search, cart, login system, and payment gateway integration.",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+      tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "MERN Stack"],
       image: Aqua,
-      github: "https://github.com/KingRuby14/AquaShop",
+      github: "https://github.com/KingRuby14/AquariumShop",
       live: "https://aquariumshop.netlify.app/",
     },
     {
@@ -34,7 +34,7 @@ export default function Project() {
       title: "Vikram Trust",
       description:
         "A modern and responsive WordPress site designed for Vikram Trust with donation and contact features.",
-      tech: ["WordPress", "HTML", "CSS"],
+      tech: ["WordPress","Elementor", "HTML", "CSS"],
       image: vikram,
       github: "",
       live: "https://vikramtrust.online/",
@@ -45,8 +45,8 @@ export default function Project() {
     <section id="Projects" className="relative py-20 bg-black">
       {/* Title */}
       <div className="container mx-auto px-6 text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Project
+        <h2 className="text-4xl md:text-5xl font-bold uppercase text-white mb-4">
+          Projects
         </h2>
         <div className="w-5/6 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
       </div>
