@@ -35,7 +35,7 @@ export default function Footer() {
                 <span>selvapandi322@gmail.com</span>
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+919092264342"
                 className="flex items-center font-semibold text-white justify-center md:justify-start gap-2 hover:text-violet-400 transition-colors"
               >
                 <FiPhone className="w-5 h-5" />
