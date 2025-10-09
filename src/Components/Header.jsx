@@ -118,7 +118,7 @@ export default function Header() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.3, duration: 0.8 }}
               className="text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300"
-              href="https://www.facebook.com/avlesidnap"
+              href="https://www.facebook.com/avlesidnapwebdev"
               target="_blank"
             >
               <FiFacebook className="w-5 h-5" />

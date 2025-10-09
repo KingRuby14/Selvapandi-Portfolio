@@ -10,9 +10,9 @@ const AnimatedCounter = () => {
   const countersRef = useRef([]);
 
   const counterItems = [
-    { value: 1, suffix: "+", label: "Years of Experience" },
+    { value: 6, suffix: "+", label: "Months of Experience" },
     { value: 2, suffix: "+", label: "Satisfied Clients" },
-    { value: 3, suffix: "+", label: "Completed Projects" },
+    { value: 5, suffix: "+", label: "Completed Projects" },
     { value: 3, suffix: "+", label: "Students Mentored" },
   ];
 

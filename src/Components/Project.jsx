@@ -3,9 +3,11 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 // ✅ Import images
-import Aqua from "../assets/aquashop.png";
+import Aqua from "../assets/Aquariumshop.png";
 import pilotHorizons from "../assets/pilot horizons.png";
 import vikram from "../assets/vikramtrust2.png";
+import expense from "../assets/expenses racker.png";
+import prabazone from "../assets/prabazone.png";
 
 export default function Project() {
   const projectList = [
@@ -31,6 +33,26 @@ export default function Project() {
     },
     {
       id: 3,
+      title: "Expenses Tracker",
+      description:
+        "A full-stack MERN application for tracking expenses with user authentication and data visualization.",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "MERN Stack"],
+      image: expense,
+      github: "https://github.com/KingRuby14/ExpenseTracker",
+      live: "https://the-expense-tracking.netlify.app/",
+    },
+    {
+      id: 4,
+      title: "PrabaZone",
+      description:
+        "A professional WordPress website built for PrabaZone with responsive design and optimized SEO.",
+      tech: ["WordPress", "Elementor", "SEO", "HTML", "CSS"],
+      image: prabazone,
+      github: "",
+      live: "https://prabazone.com",
+    },
+    {
+      id: 5,
       title: "Vikram Trust",
       description:
         "A modern and responsive WordPress site designed for Vikram Trust with donation and contact features.",

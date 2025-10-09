@@ -76,7 +76,7 @@ export default function Footer() {
               </a>
               <a
                 className="text-white hover:text-violet-400 transition-colors"
-                href="https://www.facebook.com/avlesidnap"
+                href="https://www.facebook.com/avlesidnapwebdev"
                 target="_blank"
                 rel="noreferrer"
               >
