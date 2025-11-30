@@ -19,7 +19,7 @@ export default function Project() {
       tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "MERN Stack"],
       image: Aqua,
       github: "https://github.com/KingRuby14/AquariumShop",
-      live: "https://aquariumshop.netlify.app/",
+      live: "https://aquariumshop.selvapandi.com/",
     },
     {
       id: 2,
@@ -39,20 +39,10 @@ export default function Project() {
       tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "MERN Stack"],
       image: expense,
       github: "https://github.com/KingRuby14/ExpenseTracker",
-      live: "https://the-expense-tracking.netlify.app/",
+      live: "https://expensestra.selvapandi.com/",
     },
     {
       id: 4,
-      title: "PrabaZone",
-      description:
-        "A professional WordPress website built for PrabaZone with responsive design and optimized SEO.",
-      tech: ["WordPress", "Elementor", "SEO", "HTML", "CSS"],
-      image: prabazone,
-      github: "",
-      live: "https://prabazone.com",
-    },
-    {
-      id: 5,
       title: "Vikram Trust",
       description:
         "A modern and responsive WordPress site designed for Vikram Trust with donation and contact features.",
@@ -60,6 +50,16 @@ export default function Project() {
       image: vikram,
       github: "",
       live: "https://vikramtrust.online/",
+    },
+    {
+      id: 5,
+      title: "PrabaZone",
+      description:
+        "A professional WordPress website built for PrabaZone with responsive design and optimized SEO.",
+      tech: ["WordPress", "Elementor", "SEO", "HTML", "CSS"],
+      image: prabazone,
+      github: "",
+      live: "https://prabazone.com",
     },
   ];
 

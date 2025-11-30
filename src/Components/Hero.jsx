@@ -137,7 +137,7 @@ export default function Hero() {
             </button>
 
             {/* CV Button */}
-            <a
+            {/* <a
               href="/SELVAPANDI.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -148,7 +148,7 @@ export default function Hero() {
                   Download CV
                 </button>
               </div>
-            </a>
+            </a> */}
           </motion.div>
 
           <motion.div
